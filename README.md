@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
 
-## Project info
+# DealFlow - Deal Sourcing Platform
 
-**URL**: https://lovable.dev/projects/57058c6a-4151-480d-8094-40808f7eaaca
+DealFlow is a comprehensive platform connecting business owners looking to sell with private equity investors seeking opportunities.
 
-## How can I edit this code?
+## Features
 
-There are several ways of editing your application.
+- **Authentication System**: Secure login, registration, and user management
+- **Dual Dashboards**: Separate interfaces for company owners and private equity investors
+- **Company Listings**: Manage and showcase businesses for sale
+- **Data Visualization**: Interactive charts and graphs for performance metrics
+- **AG Grid Tables**: Powerful data tables for efficient management
+- **Flask Backend**: Python backend with SQLite database integration
 
-**Use Lovable**
+## Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/57058c6a-4151-480d-8094-40808f7eaaca) and start prompting.
+### Frontend
+- React.js
+- TypeScript
+- Tailwind CSS
+- Shadcn/UI Components
+- AG Grid for data tables
+- Recharts for data visualization
 
-Changes made via Lovable will be committed automatically to this repo.
+### Backend
+- Flask (Python)
+- SQLite database
+- Werkzeug for security
 
-**Use your preferred IDE**
+## Running the Project
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Frontend
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+```bash
+# Install dependencies
+npm install
 
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Backend
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Navigate to backend directory
+cd src/backend
 
-**Use GitHub Codespaces**
+# Create a virtual environment
+python -m venv venv
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Activate the virtual environment (Windows)
+venv\Scripts\activate
+# OR (macOS/Linux)
+source venv/bin/activate
 
-## What technologies are used for this project?
+# Install dependencies
+pip install -r requirements.txt
 
-This project is built with .
+# Run the server
+python app.py
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Mock Users
 
-## How can I deploy this project?
+For testing purposes, two mock users are included:
 
-Simply open [Lovable](https://lovable.dev/projects/57058c6a-4151-480d-8094-40808f7eaaca) and click on Share -> Publish.
+1. **Company Owner**
+   - Username: `muser`
+   - Password: `muser`
 
-## Can I connect a custom domain to my Lovable project?
+2. **Private Equity Investor**
+   - Username: `mpe`
+   - Password: `mpe`
 
-Yes it is!
+## Project Structure
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- `/src` - React frontend code
+  - `/components` - Reusable UI components
+  - `/pages` - Page components
+  - `/contexts` - React contexts
+  - `/data` - Mock data for frontend
+  - `/backend` - Flask backend
+    - `app.py` - Main Flask application
+    - `schema.sql` - Database schema

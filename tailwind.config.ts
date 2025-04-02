@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,12 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Custom colors for deal sourcing platform
+				dealBlue: {
+					DEFAULT: '#0A2463',
+					light: '#3E92CC',
+					hover: '#081d4f'
 				}
 			},
 			borderRadius: {
